@@ -22,11 +22,14 @@ public class Program
 			Integer time = parseInput(args);
 			SynchronizationThread egg = new SynchronizationThread("Egg", time);
 			SynchronizationThread hen = new SynchronizationThread("Hen", time);
-			egg.start();
-			hen.start();
 
-			egg.join();  // Wait for egg to finish
-            hen.join();  // Wait for hen to finish
+			Thread threadEgg = new Thread(egg);
+			Thread threadHen = new Thread(hen);
+			threadEgg.start();
+			threadHen.start();
+
+			threadEgg.join();  // Wait for egg to finish
+            threadHen.join();  // Wait for hen to finish
 			while (time > 0)
 			{
 				System.out.println("Human");

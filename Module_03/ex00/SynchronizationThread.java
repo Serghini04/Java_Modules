@@ -1,4 +1,4 @@
-public class SynchronizationThread extends Thread {
+public class SynchronizationThread implements Runnable {
 	
 	private final String threadName;
 	private Integer time;
