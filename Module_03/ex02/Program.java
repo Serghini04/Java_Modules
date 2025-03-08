@@ -57,16 +57,16 @@ public class Program
 	private static void	parseInput(String []args)
 	{
 		if (args.length != 2)
-		throw new RuntimeException("Usage: java Program --arraySize={times} --threadsCount={NumberThreads}");
+			throw new RuntimeException("Usage: java Program --arraySize={times} --threadsCount={NumberThreads}");
 		if (!args[0].startsWith("--arraySize=") || !args[1].startsWith("--threadsCount="))
-		throw new RuntimeException("Usage: java Program --arraySize={times} --threadsCount={NumberThreads}");
+			throw new RuntimeException("Usage: java Program --arraySize={times} --threadsCount={NumberThreads}");
 		
 		arraySize = Integer.parseInt(args[0].substring(args[0].indexOf('=') + 1));
 		if (arraySize <= 0)
-		throw new RuntimeException("Usage: arraySize must be greate than 0");
+			throw new RuntimeException("Usage: arraySize must be greate than 0");
 		threadsCount = Integer.parseInt(args[1].substring(args[1].indexOf('=') + 1));
 		if (threadsCount <= 0)
-		throw new RuntimeException("Usage: threadsCount must be greate than 0");
+			throw new RuntimeException("Usage: threadsCount must be greate than 0");
 		generateRandomArray(arraySize);
 
 		sumWithoutThreads();
