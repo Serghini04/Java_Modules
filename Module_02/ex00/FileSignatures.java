@@ -20,12 +20,9 @@ public class FileSignatures {
 	{
 		map = new HashMap<>();
 		signaturesFile = "signatures.txt";
-		try
-		{
+		try {
 			res = new FileOutputStream("result.txt");
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			System.err.println(e.getMessage());
 			System.exit(1);
 		}
