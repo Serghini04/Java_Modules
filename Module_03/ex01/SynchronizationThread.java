@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   SynchronizationThread.java                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: serghini <serghini@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/08 00:59:24 by serghini          #+#    #+#             */
+/*   Updated: 2025/03/08 00:59:25 by serghini         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class SynchronizationThread extends Thread {

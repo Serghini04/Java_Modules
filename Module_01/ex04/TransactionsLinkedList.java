@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   TransactionsLinkedList.java                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: serghini <serghini@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/08 00:57:01 by serghini          #+#    #+#             */
+/*   Updated: 2025/03/08 00:57:02 by serghini         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 import java.util.UUID;
 
 public class TransactionsLinkedList implements TransactionsList 
