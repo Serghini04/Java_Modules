@@ -6,9 +6,9 @@ public class Program {
     public static void main(String[] args) throws Exception {
         Class.forName("org.postgresql.Driver");
         System.out.println("PostgreSQL JDBC Driver Registered!");
-        String url = "jdbc:postgresql://localhost:5432/FirstOne";
+        String url = "jdbc:postgresql://192.168.1.104:5432/FirstOne";
         String uname = "postgres";
-        String pass = "Serghini2@@4";
+        String pass = "*****";
         Connection con = DriverManager.getConnection(url, uname, pass);
         System.out.println("Connection Established.");
         Statement st = con.createStatement();
