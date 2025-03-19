@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ImageConverter.java                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: serghini <serghini@student.42.fr>          +#+  +:+       +#+        */
+/*   By: serghini <meserghi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 01:21:51 by serghini          #+#    #+#             */
 /*   Updated: 2025/03/10 18:03:18 by serghini         ###   ########.fr       */

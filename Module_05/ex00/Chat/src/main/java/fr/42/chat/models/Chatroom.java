@@ -1,6 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Chatroom.java                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: meserghi <meserghi@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/19 00:33:19 by meserghi          #+#    #+#             */
+/*   Updated: 2025/03/19 00:33:19 by meserghi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 package fr._42.chat.models;
 import java.util.List;
 import java.util.Objects;
+import fr._42.chat.models.Message;
+import fr._42.chat.models.User;
 
 public class Chatroom {
     private int id;

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   Pragram.java                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: serghini <serghini@student.42.fr>          +#+  +:+       +#+        */
+/*   By: serghini <meserghi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 00:55:22 by serghini          #+#    #+#             */
 /*   Updated: 2025/03/08 00:55:25 by serghini         ###   ########.fr       */

@@ -1,6 +1,18 @@
-package fr._42.chat.models;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Message.java                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: meserghi <meserghi@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/19 00:33:31 by meserghi          #+#    #+#             */
+/*   Updated: 2025/03/19 00:33:31 by meserghi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+package fr._42.chat.models;
 import java.util.Objects;
+import fr._42.chat.models.User;
 
 public class Message {
     private int id;
