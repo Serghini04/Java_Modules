@@ -1,8 +1,0 @@
-<hibernate-configuration xmlns="http://www.hibernate.org/xsd/hibernate-configuration">
-    <session-factory>
-        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://192.168.1.104:5432/FirstOne</property>
-        <property name="hibernate.connection.password">postgres</property>
-        <property name="hibernate.connection.password">****</property>
-    </session-factory>
-</hibernate-configuration>
