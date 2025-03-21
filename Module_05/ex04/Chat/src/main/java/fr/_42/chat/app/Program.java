@@ -13,44 +13,56 @@
 package fr._42.chat.app;
 
 import com.zaxxer.hikari.HikariDataSource;
-
 import fr._42.chat.models.Chatroom;
-import fr._42.chat.models.Message;
 import fr._42.chat.models.User;
-import fr._42.chat.repositories.MessagesRepository;
-import fr._42.chat.repositories.MessagesRepositoryJdbcImpl;
+import fr._42.chat.repositories.UsersRepository;
+import fr._42.chat.repositories.UsersRepositoryJdbcImpl;
 
 import javax.sql.DataSource;
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.List;
 
 public class Program {
-    private static long id;
-    private static MessagesRepository msgRepo;
     private static HikariDataSource ds;
+    private static UsersRepository usersRepo;
 
     private static void init() {
         ds = new HikariDataSource();
-
         ds.setJdbcUrl("jdbc:postgresql://192.168.1.104:5432/postgres");
         ds.setUsername("postgres");
         ds.setPassword("****");
 
-        msgRepo = new MessagesRepositoryJdbcImpl(ds);
+        usersRepo = new UsersRepositoryJdbcImpl(ds);
     }
-    public static void main(String []args) {
+
+    public static void main(String[] args) {
         try {
             init();
-            User user = new User(5, "Ana1", "*1*", new ArrayList<Chatroom>(), new ArrayList<Chatroom>());
-            Chatroom chatroom = new Chatroom(5, "room", user, new ArrayList<Message>());
-            Message msg = new Message(6,user, chatroom, "hellllllllllllllllllllo.", Timestamp.valueOf(LocalDateTime.now()));
-            msgRepo.save(msg);
+
+            int page = 1;
+            int size = 1;
+
+            List<User> users = usersRepo.findAll(page, size);
+
+            for (User user : users) {
+                System.out.println("User: " + user.getUserId() + " | " + user.getLogin());
+
+                System.out.println("  Owned Chatrooms:");
+                for (Chatroom chatroom : user.getChatrooms()) {
+                    System.out.println("    - " + chatroom.getId() + " | " + chatroom.getName());
+                }
+
+                System.out.println("  Participated Chatrooms:");
+                for (Chatroom chatroom : user.getSocializedRooms()) {
+                    System.out.println("    - " + chatroom.getId() + " | " + chatroom.getName());
+                }
+
+                System.out.println();
+            }
+
             ds.close();
+            System.exit(0);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }

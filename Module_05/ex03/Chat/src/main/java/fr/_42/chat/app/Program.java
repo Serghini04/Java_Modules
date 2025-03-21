@@ -47,7 +47,7 @@ public class Program {
             User user = new User(5, "Ana1", "*1*", new ArrayList<Chatroom>(), new ArrayList<Chatroom>());
             Chatroom chatroom = new Chatroom(5, "room", user, new ArrayList<Message>());
             Message msg = new Message(6,user, chatroom, "hellllllllllllllllllllo.", Timestamp.valueOf(LocalDateTime.now()));
-            msgRepo.save(msg);
+            msgRepo.update(msg);
             ds.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());

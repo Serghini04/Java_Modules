@@ -22,9 +22,10 @@ import java.util.Scanner;
 public class Program {
     private static long id;
     private static MessagesRepository msgRepo;
+    private static HikariDataSource ds;
 
     private static void init() {
-        HikariDataSource ds = new HikariDataSource();
+        ds = new HikariDataSource();
 
         ds.setJdbcUrl("jdbc:postgresql://192.168.1.104:5432/postgres");
         ds.setUsername("postgres");
@@ -43,6 +44,7 @@ public class Program {
         try {
             init();
             msgRepo.findById(id).ifPresent(System.out::println);
+            ds.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
