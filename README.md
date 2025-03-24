@@ -1,6 +1,8 @@
 # 🌟 My Java Journey
 
-![Java Banner](img/img.gif)
+<p align="center">
+  <img src="img/img.gif" alt="Java Banner" width="700" height="400">
+</p>
 
 > *"Java is to JavaScript what car is to carpet."* - Chris Heilmann
 
