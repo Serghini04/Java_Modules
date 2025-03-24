@@ -1,6 +1,6 @@
 # 🌟 My Java Journey
 
-![Java Banner](img/java.jpg)
+![Java Banner](img/img.gif)
 
 > *"Java is to JavaScript what car is to carpet."* - Chris Heilmann
 
