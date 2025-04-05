@@ -67,8 +67,9 @@ public class MessagesRepositoryJdbcImpl implements MessagesRepository {
             ResultSet rs = statement.executeQuery();
             if (rs.next())
                 return Optional.of(setMessageObj(rs));
-        }catch(SQLException e) {
-            throw new RuntimeException("JDBC failed!");
+        }catch (SQLException e) {
+            // Log the exception with details
+            throw new RuntimeException("JDBC failed! " + e.getMessage(), e);
         }
         return Optional.empty();
     }
