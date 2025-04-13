@@ -28,7 +28,7 @@
       </dependency>
     </dependencies>
 
-    <!-- <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -39,7 +39,7 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build> -->
+    </build>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
