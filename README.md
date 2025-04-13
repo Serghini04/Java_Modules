@@ -105,7 +105,7 @@ mvn test
 
 This repository is an ongoing journey. As I progress, I will:
 
-- Complete Module 06 and beyond
+- Complete Module 07 and beyond
 - Apply Java to real-world projects
 - Contribute to open-source Java projects
 
