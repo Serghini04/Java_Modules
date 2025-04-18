@@ -1,0 +1,83 @@
+<!-- Project Object Model (POM) definition -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <!-- Required Maven model version -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Unique identifier for your project group -->
+  <groupId>fr._42</groupId>
+
+  <!-- Project name or module name -->
+  <artifactId>ex01</artifactId>
+
+  <!-- Version of your project -->
+  <version>1.0</version>
+
+  <!-- Human-readable project name -->
+  <name>ex01</name>
+  
+  <!-- Project-wide properties -->
+  <properties>
+    <!-- Java version to compile with -->
+    <maven.compiler.release>17</maven.compiler.release>
+
+    <!-- Character encoding for source files -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <!-- Dependencies needed by your project -->
+  <dependencies>
+    <dependency>
+      <!-- Google's AutoService library (used for annotation processing) -->
+      <groupId>com.google.auto.service</groupId>
+      <artifactId>auto-service</artifactId>
+      <version>1.1.1</version>
+      <!-- Marked as provided because it's only needed at compile-time -->
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- Build configuration section -->
+  <build>
+    <plugins>
+      
+      <!-- Compiler plugin: controls how Java is compiled -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        
+        <!-- General Java release version -->
+        <configuration>
+          <release>17</release>
+        </configuration>
+        
+        <!-- Advanced execution configuration -->
+        <executions>
+          <execution>
+            <!-- Bind this execution to the "compile" phase -->
+            <phase>compile</phase>
+            <goals>
+              <!-- Compile goal -->
+              <goal>compile</goal>
+            </goals>
+            
+            <!-- Custom configuration for this execution -->
+            <configuration>
+              <!-- Only process annotations, don’t compile classes -->
+              <proc>only</proc>
+
+              <!-- Specify custom annotation processors to use -->
+              <annotationProcessors>
+                <annotationProcessor>fr._42.processor.HtmlProcessor</annotationProcessor>
+              </annotationProcessors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

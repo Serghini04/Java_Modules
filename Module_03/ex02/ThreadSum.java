@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ThreadSum.java                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: serghini <serghini@student.42.fr>          +#+  +:+       +#+        */
+/*   By: serghini <meserghi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 00:59:39 by serghini          #+#    #+#             */
 /*   Updated: 2025/03/08 00:59:40 by serghini         ###   ########.fr       */

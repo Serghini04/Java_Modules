@@ -1,0 +1,10 @@
+fr/_42/chat/models/Chatroom.class
+fr/_42/chat/models/Message.class
+fr/_42/chat/models/User.class
+fr/_42/chat/app/Program.class
+fr/_42/chat/models/Chatroom$1.class
+fr/_42/chat/repositories/NotSavedSubEntityException.class
+fr/_42/chat/repositories/UsersRepository.class
+fr/_42/chat/repositories/MessagesRepositoryJdbcImpl.class
+fr/_42/chat/repositories/MessagesRepository.class
+fr/_42/chat/repositories/UsersRepositoryJdbcImpl.class
