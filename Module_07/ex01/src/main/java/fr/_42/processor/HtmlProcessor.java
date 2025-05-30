@@ -39,8 +39,6 @@ public class HtmlProcessor extends AbstractProcessor {
             
             for (Element element : annotatedElements) {
                 HtmlForm formAnnotation = element.getAnnotation(HtmlForm.class);
-                if (formAnnotation == null) continue;
-                
                 try {
                     FileObject fileObject = processingEnv.getFiler().createResource(
                             StandardLocation.CLASS_OUTPUT,
