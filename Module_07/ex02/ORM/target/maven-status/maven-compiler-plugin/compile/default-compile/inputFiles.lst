@@ -2,5 +2,5 @@
 /workspaces/Java_Modules/Module_07/ex02/ORM/src/main/java/fr/_42/annotations/OrmColumnId.java
 /workspaces/Java_Modules/Module_07/ex02/ORM/src/main/java/fr/_42/annotations/OrmEntity.java
 /workspaces/Java_Modules/Module_07/ex02/ORM/src/main/java/fr/_42/app/App.java
-/workspaces/Java_Modules/Module_07/ex02/ORM/src/main/java/fr/_42/models/Student.java
+/workspaces/Java_Modules/Module_07/ex02/ORM/src/main/java/fr/_42/models/User.java
 /workspaces/Java_Modules/Module_07/ex02/ORM/src/main/java/fr/_42/orm/OrmManager.java

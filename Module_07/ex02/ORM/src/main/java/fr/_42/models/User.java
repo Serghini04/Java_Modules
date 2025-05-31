@@ -6,7 +6,7 @@
 /*   By: meserghi <meserghi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 10:35:24 by meserghi          #+#    #+#             */
-/*   Updated: 2025/05/31 13:21:21 by meserghi         ###   ########.fr       */
+/*   Updated: 2025/05/31 16:51:42 by meserghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ import fr._42.annotations.OrmColumn;
 import fr._42.annotations.OrmColumnId;
 
 @OrmEntity(table = "")
-public class Student {
+public class User {
     @OrmColumnId
     private int _id;
     @OrmColumn(name = "first_name", length = 10)

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr._42.ormmanager.AppTest" time="0.017" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr._42.ormmanager.AppTest" time="0.016" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/workspaces/Java_Modules/Module_07/ex02/ORM/target/test-classes:/workspaces/Java_Modules/Module_07/ex02/ORM/target/classes:/home/codespace/.m2/repository/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.jar:/home/codespace/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/codespace/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:"/>
+    <property name="java.class.path" value="/workspaces/Java_Modules/Module_07/ex02/ORM/target/test-classes:/workspaces/Java_Modules/Module_07/ex02/ORM/target/classes:/home/codespace/.m2/repository/org/reflections/reflections/0.10.2/reflections-0.10.2.jar:/home/codespace/.m2/repository/org/javassist/javassist/3.28.0-GA/javassist-3.28.0-GA.jar:/home/codespace/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/codespace/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/home/codespace/.m2/repository/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.jar:/home/codespace/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/codespace/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:"/>
     <property name="java.vm.vendor" value="Microsoft"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://www.microsoft.com"/>
@@ -14,9 +14,9 @@
     <property name="os.name" value="Linux"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/opt/java/11.0.14/lib"/>
-    <property name="sun.java.command" value="/workspaces/Java_Modules/Module_07/ex02/ORM/target/surefire/surefirebooter-20250531102525580_3.jar /workspaces/Java_Modules/Module_07/ex02/ORM/target/surefire 2025-05-31T10-25-25_446-jvmRun1 surefire-20250531102525580_1tmp surefire_0-20250531102525580_2tmp"/>
+    <property name="sun.java.command" value="/workspaces/Java_Modules/Module_07/ex02/ORM/target/surefire/surefirebooter-20250531165714129_3.jar /workspaces/Java_Modules/Module_07/ex02/ORM/target/surefire 2025-05-31T16-57-14_058-jvmRun1 surefire-20250531165714129_1tmp surefire_0-20250531165714129_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/workspaces/Java_Modules/Module_07/ex02/ORM/target/test-classes:/workspaces/Java_Modules/Module_07/ex02/ORM/target/classes:/home/codespace/.m2/repository/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.jar:/home/codespace/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/codespace/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:"/>
+    <property name="surefire.test.class.path" value="/workspaces/Java_Modules/Module_07/ex02/ORM/target/test-classes:/workspaces/Java_Modules/Module_07/ex02/ORM/target/classes:/home/codespace/.m2/repository/org/reflections/reflections/0.10.2/reflections-0.10.2.jar:/home/codespace/.m2/repository/org/javassist/javassist/3.28.0-GA/javassist-3.28.0-GA.jar:/home/codespace/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/codespace/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/home/codespace/.m2/repository/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.jar:/home/codespace/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/codespace/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/codespace"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/workspaces/Java_Modules/Module_07/ex02/ORM/target/surefire/surefirebooter-20250531102525580_3.jar"/>
+    <property name="surefire.real.class.path" value="/workspaces/Java_Modules/Module_07/ex02/ORM/target/surefire/surefirebooter-20250531165714129_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.14.1+1-LTS"/>
     <property name="user.name" value="codespace"/>
