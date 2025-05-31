@@ -1,0 +1,6 @@
+fr/_42/app/App.class
+fr/_42/annotations/OrmColumn.class
+fr/_42/models/Student.class
+fr/_42/annotations/OrmEntity.class
+fr/_42/annotations/OrmColumnId.class
+fr/_42/orm/OrmManager.class
