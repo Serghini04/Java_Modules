@@ -20,7 +20,7 @@ import java.util.Set;
 import java.sql.PreparedStatement;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
-
+import java.lang.reflect.Field;
 import fr._42.annotations.OrmEntity;
 
 public class OrmManager {
@@ -30,6 +30,21 @@ public class OrmManager {
     private final String INSERT = "INSERT INTO %s (%s) VALUES (%s)";
     private final String UPDATE = "UPDATE %s SET %s WHERE id = %s";
     private final String SELECT = "SELECT * FROM %s WHERE id = %s";
+
+    private String sqlTypeMapping(Field field) {
+        String  sqlType;
+        if (field.getType() == String.class)
+            sqlType = "VARCHAR(" + field.getAnnotation(OrmColumn.class).length() + ")";
+        else if (field.getType() == int.class || field.getType() == Integer.class)
+            sqlType = "INTEGER";
+        else if (field.getType() == long.class || field.getType() == Long.class)
+            sqlType = "BIGINT";
+        else if (field.getType() == boolean.class || field.getType() == Boolean.class)
+            sqlType = "BOOLEAN";
+        else
+            sqlType = "TEXT";
+        return sqlType;
+    }
 
     private void    setupTables() {
         Reflections reflections = new Reflections("fr._42.models");
@@ -43,9 +58,21 @@ public class OrmManager {
             
             System.out.println("Executing SQL: " + sql);
             stm.executeUpdate(sql);
-
-            // ....
             
+            Field[] fields = c.getDeclaredFields();
+            StringBuilder   columns = new StringBuilder();
+            for (int i = 0; i < fields.length; i++) {
+                Field   field = fields[i];
+                String columDef = "";
+                if (field.isAnnotationPresent(OrmColumnId.class))
+                    columDef += field.getName() + " SERIAL PRIMARY KEY";
+                else if (field.isAnnotationPresent(OrmColumn.class)) {
+                    columDef += field.getAnnotation(OrmColumn.class)
+                }
+                // ...
+            }
+            sql = String.format(CREATE_TABLE, annotation.table(), );
+        
         }
     }
 
