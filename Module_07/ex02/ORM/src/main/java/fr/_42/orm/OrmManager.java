@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
 import java.lang.reflect.Field;
-import fr._42.annotations.OrmEntity;
+import fr._42.annotations.*;
 
 public class OrmManager {
     private Connection  connection;
@@ -46,33 +46,38 @@ public class OrmManager {
         return sqlType;
     }
 
-    private void    setupTables() {
+    private void setupTables() {
         Reflections reflections = new Reflections("fr._42.models");
-
-        Set<Class<?>>   classes = reflections.getTypesAnnotatedWith(OrmEntity.class);
+        Set<Class<?>> classes = reflections.getTypesAnnotatedWith(OrmEntity.class);
         for (Class<?> c : classes) {
-            OrmEntity annotation = c.getTypesAnnotatedWith(OrmEntity.class);
-            Statement   stm = connection.createStatement();
-            
-            String sql = String.format(DROP_TABLE, annotation.table());
-            
-            System.out.println("Executing SQL: " + sql);
-            stm.executeUpdate(sql);
-            
-            Field[] fields = c.getDeclaredFields();
-            StringBuilder   columns = new StringBuilder();
-            for (int i = 0; i < fields.length; i++) {
-                Field   field = fields[i];
-                String columDef = "";
-                if (field.isAnnotationPresent(OrmColumnId.class))
-                    columDef += field.getName() + " SERIAL PRIMARY KEY";
-                else if (field.isAnnotationPresent(OrmColumn.class)) {
-                    columDef += field.getAnnotation(OrmColumn.class)
+            OrmEntity annotation = c.getAnnotation(OrmEntity.class);
+            try (Statement stm = connection.createStatement()) {
+                String sql = String.format(DROP_TABLE, annotation.table());
+                System.out.println("Executing SQL: " + sql);
+                stm.executeUpdate(sql);
+
+                Field[] fields = c.getDeclaredFields();
+                StringBuilder columns = new StringBuilder();
+                for (int i = 0; i < fields.length; i++) {
+                    Field field = fields[i];
+                    String columnDef = "";
+                    if (field.isAnnotationPresent(OrmColumnId.class))
+                        columnDef += field.getName() + " SERIAL PRIMARY KEY";
+                    else if (field.isAnnotationPresent(OrmColumn.class)) {
+                        columnDef += field.getAnnotation(OrmColumn.class).name() + " " + sqlTypeMapping(field);
+                    }
+                    else
+                        continue;
+                    columns.append(columnDef);
+                    if (i < fields.length - 1)
+                        columns.append(", ");
                 }
-                // ...
+                sql = String.format(CREATE_TABLE, annotation.table(), columns);
+                System.out.println("Executing SQL: " + sql);
+                stm.executeUpdate(sql);
+            } catch (SQLException e) {
+                System.err.println("SQL Error: " + e.getMessage());
             }
-            sql = String.format(CREATE_TABLE, annotation.table(), );
-        
         }
     }
 
@@ -83,8 +88,8 @@ public class OrmManager {
     public OrmManager(String url, String username, String password) {
         try {
             Class.forName("org.postgresql.Driver");
-            setupTables();
             connection = DriverManager.getConnection(url, username, password);
+            setupTables();
             
         } catch (ClassNotFoundException e) {
             System.err.println("JDBC Driver not found: " + e.getMessage());

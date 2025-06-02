@@ -16,10 +16,10 @@ import fr._42.annotations.OrmEntity;
 import fr._42.annotations.OrmColumn;
 import fr._42.annotations.OrmColumnId;
 
-@OrmEntity(table = "")
+@OrmEntity(table = "ana")
 public class User {
     @OrmColumnId
-    private int _id;
+    private int id;
     @OrmColumn(name = "first_name", length = 10)
     private String _firstName;
     @OrmColumn(name = "last_name", length = 10)
